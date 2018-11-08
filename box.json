@@ -1,0 +1,57 @@
+{
+    "author":"",
+    "bugs":"",
+    "changelog":"",
+    "contributors":[],
+    "dependencies":{},
+    "description":"Implements the YubiCo OTP Validation Protocol as outlined at https://developers.yubico.com/yubikey-val/Validation_Protocol_V2.0.html",
+    "devDependencies":{},
+    "documentation":"",
+    "homepage":"https://github.com/akitogo/cbYubikey",
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ],
+    "installPaths":{},
+    "instructions":"",
+    "keywords":["Yubikey","2fa"],
+    "license":[
+        {
+            "type":"",
+            "URL":""
+        }
+    ],
+    "location":"",
+    "name":"cbYubikey",
+    "private":false,
+    "projectURL":"",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/akitogo/cbYubikey.git"
+    },
+    "scripts":{},
+    "shortDescription":"Implements the YubiCo OTP Validation Protocol",
+    "slug":"cbYubikey",
+    "testbox":{
+        "bundles":"",
+        "directory":"tests.specs",
+        "labels":"",
+        "options":{},
+        "recurse":true,
+        "reporter":"",
+        "runner":[
+            {
+                "default":""
+            }
+        ],
+        "testBundles":"",
+        "testSpecs":"",
+        "testSuites":"",
+        "verbose":true,
+        "watchDelay":500,
+        "watchPaths":"**.cfc"
+    },
+    "type":"modules",
+    "version":"0.1.0"
+}
