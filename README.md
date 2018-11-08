@@ -1,7 +1,7 @@
 # cbYubikey
 YubiKey Web Services API Client
 
-Implements the YubiCo OTP Validation Protocol as outlined at http://code.google.com/p/yubikey-val-server-php/wiki/ValidationProtocolV20
+Implements the YubiCo OTP Validation Protocol as outlined at https://developers.yubico.com/yubikey-val/Validation_Protocol_V2.0.html
 
 Sends a One Time Password (OTP) via HTTP get to the YubiCo API server and returns a struct based on the response.
 
