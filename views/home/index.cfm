@@ -14,14 +14,14 @@
 	<cfset yubicoObj = createObject("Component","cbYubiKey.models.yubicoAuthClient").init() />
 	
 	<!--- authenticate the OTP --->	
-	<cfset retVal = yubicoObj.authenticate(form.yubiKeyOTP) />
+	<cfset yr = yubicoObj.verify(form.yubiKeyOTP) />
 	
 	<!--- output based on return --->
-	<cfif retVal.status eq "ok">
+	<cfif yr.isValid() >
 		<h2 style="color:green">OTP Passed Ok</h2>
 	<cfelse>
 		<h2 style="color:red">OTP Failed!</h2>
-		<cfoutput><pre>#retVal.status#</pre></cfoutput>
+		<cfoutput><pre>#yr.getStatusMessage()#</pre></cfoutput>
 	</cfif>
 </cfif>
 

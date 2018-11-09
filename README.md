@@ -5,7 +5,7 @@ Implements the YubiCo OTP Validation Protocol as outlined at https://developers.
 
 Sends a One Time Password (OTP) via HTTP get to the YubiCo API server and returns a struct based on the response.
 
-This is a super quick rewrite as a coldbox module of a client orginially written by Robert Dudley. See as well http://yubikey.riaforge.org/
+A Coldbox module or stand alone cfc of a client orginially written by Robert Dudley. See as well http://yubikey.riaforge.org/
 
 ## Installation 
 This ColdBox Module can be installed using CommandBox:
@@ -19,11 +19,14 @@ box install cbYubikey
 yubicoObj = createObject("Component","cbYubiKey.models.yubicoAuthClient").init();
 	
 //authenticate the OTP
-retVal = yubicoObj.authenticate(form.yubiKeyOTP);
+yr = yubicoObj.verify(form.yubiKeyOTP);
 
-if( retVal.status eq "ok" ) {
+if( yr.isValid() ) {
    // do something
+} else {
+	writeDump( yr.getStatusMessage() );
 }
+
 ```
 
 
@@ -39,10 +42,21 @@ component{
 	function index(event,rc,prc){
 		
 	//authenticate the OTP
-	var retVal = yubiclient.authenticate(rc.yubiKeyOTP);
+	var yr = yubiclient.verify(rc.yubiKeyOTP);
 	
-	if( retVal.status eq "ok" ) {
-   		// do something
+	if( yr.isValid() ) {
+  	   // do something
+	} else {
+		writeDump( yr.getStatusMessage() );
 	}
 }
 ```
+
+## Versions
+- 0.2.0 
+  - renamed to authenticate() to verify()
+  - verify() returns now an YubicoResponse object
+  - updated to Validation Protocol Version 2.0
+  - nonce is now required (will be auto generated)
+- 0.1.0 
+  - super quick rewrite as a coldbox module of a client orginially written by Robert Dudley
