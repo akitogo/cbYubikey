@@ -10,26 +10,26 @@ This is a super quick rewrite as a coldbox module of a client orginially written
 ## Installation 
 This ColdBox Module can be installed using CommandBox:
 
-```
+```bash
 box install cbYubikey
 ```
 ### Use as a Coldfusion component
 
-```
-	yubicoObj = createObject("Component","cbYubiKey.models.yubicoAuthClient").init();
+```js
+yubicoObj = createObject("Component","cbYubiKey.models.yubicoAuthClient").init();
 	
-	//authenticate the OTP
-	retVal = yubicoObj.authenticate(form.yubiKeyOTP);
-	
+//authenticate the OTP
+retVal = yubicoObj.authenticate(form.yubiKeyOTP);
 
-	if( retVal.status eq "ok" )
-    // do something
+if( retVal.status eq "ok" ) {
+   // do something
+}
 ```
 
 
 ### ColdBox Module
 
-```
+```js
 /**
 * A normal ColdBox Event Handler
 */
@@ -38,13 +38,11 @@ component{
 	
 	function index(event,rc,prc){
 		
-	  //authenticate the OTP
-	  var retVal = yubiclient.authenticate(rc.yubiKeyOTP);
+	//authenticate the OTP
+	var retVal = yubiclient.authenticate(rc.yubiKeyOTP);
 	
-
-	  if( retVal.status eq "ok" )
-      // do something
-		
+	if( retVal.status eq "ok" ) {
+   		// do something
 	}
 }
 ```
