@@ -7,6 +7,8 @@ Sends a One Time Password (OTP) via HTTP get to the YubiCo API server and return
 
 A Coldbox module or stand alone cfc of a client orginially written by Robert Dudley. See as well http://yubikey.riaforge.org/
 
+For an introduction check the presenation Rob held on CFCamp 2018 https://www.slideshare.net/robcwdudley/secure-all-teh-things-add-2-factor-authentication-to-your-own-projects
+
 ## Installation 
 This ColdBox Module can be installed using CommandBox:
 
