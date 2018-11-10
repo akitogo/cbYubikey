@@ -47,7 +47,7 @@ component {
 	this.author 			= "Akitogo Team originally written by Robert Dudley";
 	this.webURL 			= "https://github.com/akitogo/cbYubikey";
 	this.description 		= "Implements the YubiCo OTP Validation Protocol as outlined at https://developers.yubico.com/yubikey-val/Validation_Protocol_V2.0.html";
-	this.version			= "0.3.0";
+	this.version			= "0.4.0";
 	// If true, looks for views in the parent first, if not found, then in the module. Else vice-versa
 	this.viewParentLookup 	= true;
 	// If true, looks for layouts in the parent first, if not found, then in module. Else vice-versa

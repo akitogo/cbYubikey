@@ -10,9 +10,7 @@ component output="false" accessors="false" {
 	 * constructor
 	 */
 	public YubicoResponse function init() {
-        variables.yRequest  = { };
-        variables.yResponse = { };
-        variables.valid     = false;
+        clear();
 
         return this;
 
@@ -45,6 +43,8 @@ component output="false" accessors="false" {
      * if conditions are met sets valid to true
 	 */
 	public YubicoResponse function validate( required struct yRequest, required struct yResponse )  {
+        clear();
+
         variables.yRequest  = arguments.yRequest;
         variables.yResponse = arguments.yResponse;
 
@@ -99,5 +99,18 @@ component output="false" accessors="false" {
     return "";
 
 	}  
+
+
+	/**
+	 * clear on init and before comparing response and request
+	 */
+	private void function clear( )  {
+        variables.yRequest  = { };
+        variables.yResponse = { };
+        variables.status    = '';    
+        variables.valid     = false;    
+	}  
+
+ 
   
 }
