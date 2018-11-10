@@ -19,6 +19,20 @@ component output="false" accessors="false" {
     }
 
 	/**
+	 * returns OTP public ID
+     * call only after validate
+     * if valid returns a 12 char string
+     * if not returns empty string
+     * see https://developers.yubico.com/OTP/OTPs_Explained.html
+	 */
+	public string function getPublicId( )  {
+        if( this.isValid() )
+            return left( variables.yRequest.otp, 12 );
+        return "";
+	}  
+
+
+	/**
 	 *
 	 */
 	public boolean function isValid( )  {

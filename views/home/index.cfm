@@ -18,7 +18,7 @@
 	
 	<!--- output based on return --->
 	<cfif yr.isValid() >
-		<h2 style="color:green">OTP Passed Ok</h2>
+		<h2 style="color:green">OTP Passed Ok, the public ID is <cfoutput>#yr.getPublicId()#</cfoutput></h2>
 	<cfelse>
 		<h2 style="color:red">OTP Failed!</h2>
 		<cfoutput><pre>#yr.getStatusMessage()#</pre></cfoutput>
