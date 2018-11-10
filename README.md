@@ -14,7 +14,7 @@ This ColdBox Module can be installed using CommandBox:
 box install cbYubikey
 ```
 ### Use as a Coldfusion component
-To do a quick test call from you browser: http://yourServer/cbYubikey/views/home/index.cfm
+To do a quick test call from your browser: http://yourServer/cbYubikey/views/home/index.cfm
 
 ```js
 yubicoObj = createObject("Component","cbYubiKey.models.yubicoAuthClient").init();
@@ -35,7 +35,7 @@ if( yr.isValid() ) {
 
 
 ### ColdBox Module
-To do a quick test call from you browser: http://yourServer/cbYubikey
+To do a quick test call from your browser: http://yourServer/cbYubikey
 
 ```js
 /**
