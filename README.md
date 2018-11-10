@@ -65,7 +65,7 @@ component{
 
 ## Versions
 - 0.4.0
- - fix: before comparing response and request clear YubicoResponse object
+  - fix: before comparing response and request clear YubicoResponse object
 - 0.3.0
   - added getPublicId() to YubicoResponse object, returns 12 char public id if validation before was successful
 - 0.2.0 
