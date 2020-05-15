@@ -109,8 +109,8 @@ component hint="handles yubico authentication" output="false" accessors="true" {
 	private struct function parseAuthResponse( required string authResponse )  {
 
 		var authResponseStruct = {};
-		var authResponse = reReplace( arguments.authResponse, "\s",",", "all" );
-		var aryAuthResp = listToArray( authResponse );
+		var aryAuthResp = listToArray( javacast("string", arguments.authResponse).replaceAll("\s",",") );
+
 
 		for ( var keyValue in aryAuthResp ) {
 			var keyValue = replace( keyValue ,"=","~","one");
