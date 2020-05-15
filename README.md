@@ -65,7 +65,7 @@ component{
 
 ## Versions
 - 0.4.1
-  -fix: AUTHRESPONSE is already defined in argument scope. (Thanks James Moberg)
+  - fix: AUTHRESPONSE is already defined in argument scope. (Thanks James Moberg)
 - 0.4.0
   - fix: before comparing response and request clear YubicoResponse object
 - 0.3.0
